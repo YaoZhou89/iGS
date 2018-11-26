@@ -3,6 +3,7 @@
 ## Requirement 
 java 1.8 or above
 
-## installation
+## Installation
 This software is free of installation, you can just download the software folder. Windows and mac users could just double knick iGS.jar file; and Linux users could run the following command in terminal:
-######### sh iGS.sh 
+
+    sh iGS.sh 
