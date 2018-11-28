@@ -9,4 +9,4 @@ This software is free of installation. Windows and mac users could just double k
     sh iGS.sh 
 ## Usage
 
-Details could be found in the [manual]().
+Details could be found in the [manual](https://github.com/YaoZhou89/iGS/blob/master/Manual.pdf).
