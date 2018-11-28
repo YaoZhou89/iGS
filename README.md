@@ -10,3 +10,6 @@ This software is free of installation. Windows and mac users could just double k
 ## Usage
 
 Details could be found in the [manual](https://github.com/YaoZhou89/iGS/blob/master/Manual.pdf).
+
+## Contact
+Yao Zhou (yao.zhou@genetics.ac.cn)
