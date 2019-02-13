@@ -1,0 +1,94 @@
+package com.pedigree.operate;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class File {
+
+	public static void main(String[] args) throws IOException {
+		String path = "D:\\2015student\\11-17\\standard pedigree file1.csv";
+		ArrayList<Integer> num = read(path);
+		System.out.println("read");
+		System.out.println(num.size());
+		/*
+		for (int i = 0; i < num.size(); i++) {
+
+			
+				System.out.print( num.get(i) );
+			if((i+1)%15==0.0){
+			System.out.println();
+			}
+		}*/
+	}
+
+	/**
+	 * 读pedigree文件、
+	 * 
+	 * @param file
+	 * @return
+	 * @throws IOException
+	 */
+	public static ArrayList<Integer> read(String file) {
+		ArrayList<Integer> liststr = new ArrayList<Integer>();
+		
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					new FileInputStream(file)));
+			String line = br.readLine();
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+				line = add0(line);
+				System.out.println(line);
+				String[] str = line.split(",");
+				StringBuffer sbs = new StringBuffer();
+				for (int i = 0; i < str.length; i++) {
+					if (str[i] == null || str[i].equals("NA"))
+						sbs.append("0");
+					else
+						sbs.append(str[i]);
+				}
+				String[] num1 = sbs.toString().split("");
+				sbs.setLength(0);
+				int[] num = new int[15];
+				for (int count = 0; count < num1.length; count++) {
+					liststr.add(Integer.valueOf(num1[count]));
+				}
+			}
+			//return liststr;
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			return liststr;
+		}
+	}
+
+	/**
+	 * 行处理
+	 * 
+	 * @param line
+	 * @return
+	 */
+	private static String add0(String line) {
+		String newString = line;
+		int count=0 ;
+		for ( count = 0; count < newString.length() - 1; count++) {
+		//while(String.valueOf(newString.charAt(count))!=null){
+			// newString中第count个字符和第count+1个字符同为"," 则在中间加"0"
+			if (String.valueOf(newString.charAt(count)).equals(
+					String.valueOf(newString.charAt(count + 1)))
+					&& String.valueOf(newString.charAt(count)).equals(",")) {
+
+				newString = newString.substring(0, count + 1) + "0"
+						+ newString.substring(count + 1, line.length());
+			}
+			count++;
+		}
+		return newString;
+	}
+
+}
