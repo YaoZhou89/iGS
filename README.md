@@ -20,7 +20,7 @@ Linux users could run the following command in terminal:
     
 ## Usage
 
-iGS could be used easily from the interface if users are familiar with the model. Details for parameters could be found in the [manual](https://github.com/YaoZhou89/iGS/blob/master/Manual.pdf).
+iGS could be used easily from the interface. Details for parameters could be found in the [manual](https://github.com/YaoZhou89/iGS/blob/master/Manual.pdf).
 
 ## Contact
 Yao Zhou (yao.zhou@genetics.ac.cn)
