@@ -4,7 +4,7 @@
 java 1.8 or above
 
 ## Installation
-This software is free of installation. Windows and mac users could just double knick iGS.jar in the iGS folder; and Linux users could run the following command in terminal:
+This software is free of installation. Windows and mac users could just double-click iGS.jar in the iGS folder; and Linux users could run the following command in terminal:
 
     sh iGS.sh 
 ## Usage
